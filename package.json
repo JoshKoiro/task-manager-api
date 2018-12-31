@@ -1,0 +1,11 @@
+{
+  "name": "task-manager-api",
+  "version": "0.0.1",
+  "description": "Backend API interface for task manager application",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "JoshKoiro",
+  "license": "ISC"
+}
