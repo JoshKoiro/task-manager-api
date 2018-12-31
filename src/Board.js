@@ -1,3 +1,11 @@
+/**@name Board
+ * @class
+ * @description Class to hold task states and automated logic to automatically change task states
+ * @property {Array} states Array of states able to be assigned to tasks within the project
+ * @property {String} workingState State to change task to when the task's timer has been started
+ * @property {String} stoppingState State to change task to when the task's timer has been stopped
+ */
+
 module.exports = class Board {
 
     constructor(){

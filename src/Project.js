@@ -6,6 +6,12 @@ const Timer = require('./Timer.js')
 /**@name Project
  * @class
  * @description Class to hold tasks, board and schedule data
+ * @param {String} name name of project
+ * @property {String} name name of project
+ * @property {Array} tasks list of Task objects within the Project
+ * @property {Board} board Board object associated with Project
+ * @property {Schedule} schedule Schedule object associated with Project
+ * @property {Timer} timer Timer object associated with Project
  */
 
 module.exports = class Project {
@@ -18,8 +24,21 @@ module.exports = class Project {
         this.timer = null
     }
 
-    addTask(name,endDate,block){
-        this.tasks.push(new Task(name,endDate,block))
+    /**@name addTask
+     * @method
+     * @description Renames task name
+     * @memberof Project
+     * @param {String} name Name to be assigned to Task object
+     * @param {String} [description] Description of task
+     * @param {Date} [dueDate] Due date assigned to Task object
+     * @param {String} [block] Block for task to be assigned to
+     * @param {String} [state] State to be assigned to the task
+     * @returns {Project} Returns the project this was called on (this)
+     * 
+     */
+
+    addTask(name,description,dueDate,block,state){
+        this.tasks.push(new Task(name,description,dueDate,block,state))
         return this
     }
 
@@ -33,6 +52,15 @@ module.exports = class Project {
         return this
     }
 
+    /**@name getTask
+     * @method
+     * @description return a task contained within the Project.tasks array
+     * @memberof Project
+     * @param {String} name Name to be assigned to Task object
+     * @returns {Task} Returns first task item matching the task name
+     * 
+     */
+
     getTask(name){
         let output = {}
         this.tasks.forEach((e,i) => {
@@ -43,6 +71,15 @@ module.exports = class Project {
         })
         return output
     }
+
+    /**@name getTasks
+     * @method
+     * @description returns the names of all tasks contained in the Project.tasks array
+     * @memberof Project
+     * @param {String} name Name to be assigned to Task object
+     * @returns {Array} Returns first task item matching the task name
+     * 
+     */
 
     getTasks(props){
         if(props === undefined){

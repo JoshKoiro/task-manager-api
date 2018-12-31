@@ -1,5 +1,11 @@
 const Block = require('./Block.js')
 
+/**@name Schedule
+ * @class
+ * @description Class to hold a schedule configuration for a Project object.
+ * @property {Block[]} blocks Array of block items
+ */
+
 module.exports = class Schedule {
 
     constructor(){
