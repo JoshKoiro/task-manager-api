@@ -4,8 +4,13 @@
   "description": "Backend API interface for task manager application",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "doc": "node_modules/.bin/jsdoc -c jsdoc.json"
   },
   "author": "JoshKoiro",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "docdash": "^1.0.1",
+    "jest": "^23.6.0"
+  }
 }
