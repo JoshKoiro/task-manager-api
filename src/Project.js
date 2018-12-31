@@ -3,6 +3,11 @@ const Board = require('./Board.js')
 const Schedule = require('./Schedule.js')
 const Timer = require('./Timer.js')
 
+/**@name Project
+ * @class
+ * @description Class to hold tasks, board and schedule data
+ */
+
 module.exports = class Project {
 
     constructor(name){
